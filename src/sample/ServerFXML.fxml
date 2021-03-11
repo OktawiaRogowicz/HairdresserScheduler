@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="603.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ServerController">
+   <children>
+      <BorderPane prefHeight="617.0" prefWidth="1076.0">
+         <right>
+            <StackPane fx:id="stackPane" prefHeight="617.0" prefWidth="820.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="tableViewPane" prefHeight="617.0" prefWidth="756.0" style="-fx-background-color: ffffff;">
+                     <children>
+                        <TableView fx:id="appointmentsTable" layoutX="71.0" layoutY="100.0" prefHeight="300.0" prefWidth="679.0">
+                           <columns>
+                              <TableColumn fx:id="dateCol" prefWidth="91.0" text="Date" />
+                              <TableColumn fx:id="timeCol" prefWidth="53.0" text="Time" />
+                              <TableColumn fx:id="nameCol" prefWidth="106.0" text="Name" />
+                              <TableColumn fx:id="surnameCol" prefWidth="123.0" text="Surname" />
+                              <TableColumn fx:id="phoneNumberCol" prefWidth="95.0" text="Phone number" />
+                              <TableColumn fx:id="commentsCol" prefWidth="210.0" text="Comments" />
+                           </columns>
+                        </TableView>
+                        <TextArea fx:id="messages" layoutX="72.0" layoutY="418.0" prefHeight="163.0" prefWidth="677.0" />
+                        <Text layoutX="70.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments" wrappingWidth="223.13671875">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </right>
+         <left>
+            <Pane prefHeight="617.0" prefWidth="285.0" styleClass="linear-grad" stylesheets="@csslayout.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="-2.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anna Nowak" textAlignment="CENTER" wrappingWidth="293.13671875">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="186.0" fitWidth="200.0" layoutX="52.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Oktawia/IdeaProjects/Hairdresser/Icons/photo.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="-7.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fryzjer damski" textAlignment="CENTER" wrappingWidth="303.6171875" />
+                  <Circle fx:id="btnClose" fill="#ff5757" layoutX="19.0" layoutY="19.0" onMouseClicked="#handleMouseEvent" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#ffd744" layoutX="35.0" layoutY="19.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Circle fill="#76c668" layoutX="50.0" layoutY="19.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
